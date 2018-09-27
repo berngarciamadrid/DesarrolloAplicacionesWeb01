@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQuery Slides</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+    background-color:whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darkolivegreen;
+    opacity:0.9;
+    border-radius:20px;
+    color:white;
+    height:1500px;
+}
+
+
+button{
+    margin-left:30%;
+    border-radius: 20px;
+    background-color:darkblue;
+    color: white;
+    opacity:0.9;
+}
+
+#obj1{
+    background: #98bf21;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+#obj2{
+    background: #D03335;
+    height: 150px;
+    width: 250px;
+    position:absolute;
+   
+}
+
+
+
+
+
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#btn").click(function(){
+      $("div").animate({left:'500px'});
+
+    });
+});
+
+ 
+        
+        
+</script>
+
+
+
+</head>
+<body>
+<main>
+<button id="btn">pulsa para comenzar la animacion</button>
+<div id="obj1"></div><br><br><br>
+<div id="obj2"></div>
+
+
+
+
+</main>
+
+
+</body>
+</html>

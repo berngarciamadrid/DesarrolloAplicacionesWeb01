@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Noticias varias</title>
+    <link href="externa.css" rel="stylesheet">
+    <style>
+        #fotochanes li {
+            display: inline-block;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+        
+        #fotochanes li a {
+            padding: 5px 10px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+        }
+        
+        #fotochanes li a:hover {
+            background-color: rgb(255, 153, 0);
+            color: white;
+        }
+        
+        #contenidos_externos #noticia {
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px solid white;
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#fotochanes a").click(function() {
+                var url = $(this).attr("href");
+                $("#contenidos_externos").load(url + ' #imagenchan ');
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <p class="logo"> Imágenes de Shin Chan</p>
+    </header>
+    <section class="contenido">
+        <article class="principal">
+            <h1>Shin Chanes Varios</h1>
+            <ul id="fotochanes">
+                <li><a href="chanculete.html">Shin Chan Culete</a></li>
+                <li><a href="chantrompa.html">Shin Chan Trompa</a></li>
+                <li><a href="chanchon.html">Shin Chan Chon</a></li>
+            </ul>
+            <article id="contenidos_externos"> </article>
+        </article>
+    </section>
+
+</body>
+
+</html>

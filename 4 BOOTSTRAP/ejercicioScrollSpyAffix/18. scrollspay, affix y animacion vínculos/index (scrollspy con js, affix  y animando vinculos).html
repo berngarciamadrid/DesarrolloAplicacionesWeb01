@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body{
+	position:relative;
+}
+img{
+	margin-bottom:200px;
+	width:100%;}
+.affix {  /*hace que mediante el top=0 el div asociado a la barra de navegación quede por encima y se pegue a la barra*/
+      top:0;
+      width: 100%;
+     
+  }
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('body').scrollspy({   //añadimos scrollspy al body
+		target: ".navbar", offset: 120});
+// añadimos smooth scrolling en todos los links dentro de navbar
+	$("#myNavbar a").on('click', function(event) {
+
+  // Asegúrate de que this.hash tenga un valor antes de anular el comportamiento predeterminado
+	if (this.hash !== "") { //mientras no esté vacio haz el evento
+    // Evitar el comportamiento de clic de ancla predeterminado
+    event.preventDefault();
+
+    // Almacenar hash
+    var hash = this.hash;
+
+    // Usar el método animate() de jQuery's para agregar un desplazamiento suave de la página
+    // El número opcional (800) especifica la cantidad de milisegundos necesarios para desplazarse al área especificada
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function(){
+    // Agregue hash (#) a URL cuando finalice el desplazamiento (comportamiento de clic predeterminado)
+      window.location.hash = hash;
+    });
+
+	} // End if
+
+	});
+});
+</script>
+</head>
+<!--EN ESTE EJERCICIO VAMOS A CREAR EL SCROLLSPY CON JS-->
+<body > <!--data-spy="scroll" relaciona los vínculos, los señala en el menú-->
+<div class="container-fluid" style="background-color:#F44336;color:#fff;height:200px;">
+<h2>Seleciona el destino que te guste</h2>
+</div>
+
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <div class="collapse navbar-collapse" id="myNavbar"> <!--collapse oculat la barra de navegación principal, id myNavbar relaciono el icono de navegación la pantalla más pequeña con la navegación principal-->
+                    <ul class="nav navbar-nav">
+                        <li><a  href="#berlin">BERLIN</a></li>
+                        <li><a href="#cuba">CUBA</a></li>
+                        <li><a href="#venecia">VENECIA</a></li>
+                        <li><a href="#venezuela">VENEZUELA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <img src="img/berlin.png" alt="Berlin" title="BERLIN" id="berlin" class="container-fluid"> <!--OJO!! class="container-fluid" necesita tener un ancho asignado en porcentaje para que lo haga-->
+    <img src="img/cuba.png" alt="Cuba" title="CUBA" id="cuba" class="container-fluid">
+    <img src="img/venecia.png" alt="Venecia" title="VENECIA" id="venecia" class="container-fluid">
+    <img src="img/venezuela.png" alt="Venezuela" title="VENEZUELA" id="venezuela" class="container-fluid">
+    </body>
+</html>

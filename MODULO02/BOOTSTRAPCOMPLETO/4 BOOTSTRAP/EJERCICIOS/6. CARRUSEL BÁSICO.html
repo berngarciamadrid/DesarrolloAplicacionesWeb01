@@ -1,0 +1,62 @@
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  img{
+	 width:100%;}
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Carousel Example</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- 
+  class= "carousel" especifica que ese contenedor tiene un carrusel
+  class= "slide" agrea un efecto de transición y animación css, para que los elementos se deslicen cuando se muestra un nuevo elemento
+  data-ride="carousel" permite que comience a animar el carrusel inmediatamente cuando se carga la página  -->
+    <ol class="carousel-indicators">    <!--class="carousel-indicators" indica que va a haber indicadores de el numero total de imagenes y cual  es el número de la imagene en la que está SE DEBE PONER EN EL ELEMENTO OL (ELEMENTO PADRE).<br>
+Luego a cada uno de los l1 se les asocia con el numero correspondiente a traves de el atributo data-slide-to.<br>
+<br>
+el data target relaciona esos li con el carusel en concreto (myCarousel)
+
+ojo!! a una de las diapositivas, por ejemplo la primera, es necesario que le añada el class "active" para que el carrusel esté visible -->
+
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+     
+        <img src="maxresdefault (1).png" alt="Sin Chan 1" class="item active">
+   
+
+
+        <img src="1.jpg" alt="Sin Chan 2" class="item">
+
+
+        <img src="3.png" alt="Sin Chan 3" class="item">
+    
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

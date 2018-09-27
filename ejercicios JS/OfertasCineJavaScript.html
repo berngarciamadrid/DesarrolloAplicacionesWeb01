@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mi Séptimo Javascript</title>
+<script>
+
+var diasemana=prompt("Día de la semana: ");
+diasemana=diasemana.toLowerCase();
+
+
+
+switch(diasemana){
+case  "lunes":
+var pareja=prompt("¿tienes pareja? (si o no)");
+if(pareja=="si"){
+    alert("Parejas gratis los Lunes");
+
+}else{
+    alert("Si no tienes pareja, tarifa normal");
+}
+    break;
+case "martes":
+var edad=parseInt(prompt("¿Qué edad tienes?"));
+if (edad>=10 && edad<21){
+    alert("La entrada te vale 1 €");
+
+}else{
+    alert("Tarifa normal");
+}
+    break;
+case "miercoles":
+var edad=parseInt(prompt("¿Qué edad tienes?"));
+if (edad<8){
+    alert("La entrada te vale gratis");
+}else{
+    alert("Tarifa normal");
+}
+    break;
+case "jueves":
+var edad=parseInt(prompt("¿Qué edad tienes?"));
+if (edad>=65){
+
+    alert("La entrada te vale gratis");
+}else{
+    alert("Tarifa normal");
+}
+    break;
+case "viernes":
+    alert("La entrada te vale gratis");
+
+    break;
+case "sabado":
+var edad=parseInt(prompt("¿Qué edad tienes?"));
+if (edad>=15){
+
+    alert("La entrada te vale 10€");
+}else{
+    alert("Tarifa normal");
+}
+    break;
+case "domingo":
+    alert("El cine está cerrado");
+
+    break;
+
+default:
+alert("Tarifa normal");
+} ;
+
+
+
+</script>
+<style>
+body{
+	background-color:rgba(170,249,209,1);
+	
+}
+h5{
+	background-color:rgba(120,98,249,1);
+	font-family:"Arial Black", Gadget, sans-serif;
+	margin-left:20%;
+	margin-right:20%;
+	text-align:center;
+	color:rgba(255,255,255,1);
+	
+	
+}
+
+</style>
+</head>
+
+<body>
+
+
+</body>
+</html>

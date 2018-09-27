@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+    <style>
+        body {
+            background-color: #FFCCCC;
+        }
+        div {
+            width: 350px;
+            margin: auto;
+            background-color: #999900;
+            border: 3px solid red;
+            border-radius: 12px;
+        }
+
+        .izquierda {
+            width: 50%;
+        }
+
+        .rayita {
+            margin; 0px;
+            border-bottom: 2px solid white;
+            border-collapse: collapse;
+        }
+        .botones {
+            text-align: right;
+            
+        }
+        .espacio {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function mostrar(a, b, c)
+        {
+            alert("Te llamas "+a+",  nos conociste mediante "+c+" y tu email es: "+b);
+        }
+    </script>
+</head>
+
+<body>
+<div>
+    <form>
+        <table>
+            <tr>
+                <td class="izquierda">
+                    <p>Nombre:</p>
+                </td>
+                <td><input id="nombre" type="text" size="20">
+                </td>
+            </tr>
+            <tr><td colspan="2" class="rayita"></td></tr>
+            <tr>
+                <td class="izquierda">
+                    <p>Correo Electrónico:</p>
+                </td>
+                <td><input id="correo" type="text" size="20">
+                </td>
+            </tr>
+            <tr><td colspan="2" class="rayita"></td></tr>
+            <tr>
+                <td class="izquierda">
+                    <p>Repite tu Correo:</p>
+                </td>
+                <td><input id="correo2" type="text" size="20">
+                </td>
+            </tr>
+            <tr><td colspan="2" class="rayita"></td></tr>
+            <tr>
+                <td class="izquierda">
+                    <p>Como nos conociste:</p>
+                </td>
+                <td>
+                    <select name="forma">
+                            <option value="a" selected>Por un amigo</option>
+                            <option value="w">Web</option>
+                            <option value="p">Prensa</option>
+                            <option value="o">Otros</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan="2" class="rayita"></td></tr>
+            <tr>
+                <td class="izquierda">
+                    <p>Tu pregunta es referente a:</p>
+
+                </td>
+                <td>
+                    <input type="checkbox" name="check" value="1">La Web<br>
+                    <input type="checkbox" name="check" value="2">La Asociación<br>
+                    <input type="checkbox" name="check" value="3">Las Fotos<br>
+                </td>
+            </tr>
+            <tr><td colspan="2" class="rayita"></td></tr>
+            <tr>
+                <td colspan="2">
+                    <p>Escribe aquí lo que quieras preguntarnos</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p><textarea name="texto" rows="5" cols="45"></textarea></p>
+                </td>
+            </tr>
+            <tr><td colspan="2" class="rayita"></td></tr>
+            <tr>
+                <td colspan="2" class="botones">
+                    <input type="submit" class="espacio" value="Enviar" onclick="mostrar(nombre.value, correo.value, forma.value)">
+                    <input type="reset" class="espacio" value="Borrar">
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>Intento de Menú desplegable </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+        body {
+            text-align: center;
+            font-family: 'Gloria Hallelujah', cursive;
+            background-color: rgba(102, 153, 153, 1);
+            color: white;
+        }
+        
+        main {
+            margin-top: 5%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        
+        nav a {
+            display: inline-block;
+        }
+        
+        ul li {
+            list-style-type: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+
+<body ng-app="">
+    <main>
+        <nav>
+            <table>
+                <tr>
+                    <td>
+                        <a ng-click="showmeone=true" ng-dblclick="showmeone=false">Nacional
+                    </a>
+                    </td>
+
+                    <td><a ng-click="showmetwo=true" ng-dblclick="showmetwo=false">Internacional
+                </a>
+                    </td>
+                    <td>
+                        <a ng-click="showmethree=true" ng-dblclick="showmethree=false">Deportes
+                    </a>
+                    </td>
+                    <td>
+                        <a ng-click="showmefour=true" ng-dblclick="showmefour=false">Economía
+            </a>
+                    </td>
+                    <td>
+                        <a ng-click="showmefive=true" ng-dblclick="showmefive=false">Cultura
+            </a>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <ul ng-show="showmeone">
+                            <li>Madrid</li>
+                            <li>Cataluña</li>
+                            <li>País Vasco</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul ng-show="showmetwo">
+                            <li>Europa</li>
+                            <li>América</li>
+                            <li>Asia,Africa</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul ng-show="showmethree">
+                            <li>Real Madrid</li>
+                            <li>Atlético de Madrid</li>
+                            <li>Barcelona</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul ng-show="showmefour">
+                            <li>Declaración de la Renta</li>
+                            <li>Index 35</li>
+                            <li>Wall Street</li>
+                        </ul>
+                    </td>
+                    <td>
+
+                        <ul ng-show="showmefive">
+                            <li>Música</li>
+                            <li>Cine</li>
+                            <li>Exposiciones</li>
+
+                    </td>
+                </tr>
+            </table>
+
+        </nav>
+        <main>
+
+
+</body>
+
+</html>

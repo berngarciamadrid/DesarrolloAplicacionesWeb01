@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script language="javascript">
+var resultado; 
+function Suma(op1,op2) { 
+resultado=parseInt(op1)+parseInt(op2); 
+alert("La suma es: "+resultado); 
+} 
+function Resta(op1,op2) { 
+resultado=parseInt(op1)-parseInt(op2); 
+alert("La resta es: "+resultado); 
+}
+function Multiplicación(op1,op2) { 
+resultado=parseInt(op1)*parseInt(op2); 
+alert("La multiplicación es: "+resultado); 
+} 
+function División(op1,op2) { 
+resultado=parseInt(op1)/parseInt(op2); 
+alert("La división es: "+resultado); 
+} 
+function Porcentaje(op1,op2) { 
+resultado=parseInt(op1)%parseInt(op2); 
+alert("El porcentaje es: "+resultado); 
+} 
+
+</SCRIPT>
+</head>
+<body>
+Está es mi página de javascript.
+<form>
+<input type="text" name="operador1" size="20"><br>
+<input type="text" name="operador2" size="20"><br>
+<input type="button" name="suma" value="suma" onClick="Suma(operador1.value,operador2.value)"><br>
+<input type="button" name="resta" value="resta" onClick="Resta(operador1.value,operador2.value)"><br>
+<input type="button" name="multiplicar" value="multiplicar" onClick="Multiplicación(operador1.value,operador2.value)"><br>
+<input type="button" name="división" value="dividisión" onClick="División(operador1.value,operador2.value)"><br>
+<input type="button" name="porcentaje" value="porcentaje" onClick="Porcentaje(operador1.value,operador2.value)"><br>
+</form>
+</body>
+</html>

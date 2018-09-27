@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Noticias varias</title>
+    <link href="externa.css" rel="stylesheet">
+    <style>
+        #contenidos_externos #noticia {
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px solid white;
+        }
+        
+        main {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+        
+        input {
+            float: right;
+            width: 90%;
+            margin-bottom: 5px;
+        }
+        
+        input[type="submit"] {
+            width: 350px;
+            margin-left: 200px;
+        }
+        
+        p {
+            text-align: center;
+            font-family: 'Berkshire Swash', cursive;
+        }
+    </style>
+    <script src="jquery-1.6.3.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).ready(function() {
+
+                $('#login').submit(function() {
+
+                    var datos_enviar = $(this).serialize();
+
+                    $.get('login.php', datosEnviar, verificarDatos);
+
+                    return false;
+
+                    function verificarDatos(datosverificados) {
+
+                        if (datosverificados == "autorizado") {
+                            $('#contenidosexternos').html("<p>Bienvenido a tu página web, Juan</p>");
+                        } else {
+                            $('#contenidosexternos').html("<p>Usuario Inexistente</p>");
+                        };
+                    };
+                });
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="cabecera">
+        <p class="logo">Procesando respuesta del servidor</p>
+    </div>
+    <div class="contenido">
+        <div class="principal">
+            <form method="get" action="login.php" id="login">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="usuario">Usuario:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="usuario" id="usuario">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contra">Contraseña: </label>
+                        </td>
+                        <td>
+                            <input type="password" name="contra" id="contra">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="boton" id="boton" value="Enviar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div id="contenidos_externos"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

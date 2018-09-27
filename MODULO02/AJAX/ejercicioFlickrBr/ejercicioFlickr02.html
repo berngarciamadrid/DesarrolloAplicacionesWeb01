@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+        #mapa h2 {
+            color: black;
+        }
+        
+        #mapa p {
+            color: black;
+        }
+        
+        #mapa {
+            height: 400px;
+            width: 760px;
+        }
+        
+        p {
+            font-family: 'Spectral SC', serif;
+        }
+        
+        body {
+            background-color: darkkhaki;
+            opacity: 0.7;
+        }
+        
+        main {
+            margin-left: 20%;
+            margin-top: 10%;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function() {
+            var URL = "http://api.flickr.com/services/feeds/photos_public.gne";
+            var ID = "120126735@N05";
+            var jsonFormat = "&format=json&jsoncallback=?";
+            var ajaxURL = URL + "?id=" + ID + jsonFormat;
+
+            $.getJSON(ajaxURL, function(data) {
+                $('h1').text(data.title);
+                $.each(data.items, function(i, photo) {
+                    var photoHTML = '<span class="image">';
+                    photoHTML += '<a href="' + photo.link + '">';
+                    photoHTML += '<img src="' + photo.media.m.replace('_m', '_s') + '"></a>';
+                    $('#photos').append(photoHTML);
+
+                }); //fin de each
+            }); //fin de get JSON;
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <main>
+
+        <h1></h1>
+        <a>Enlace</a>
+        <div id="photos"></div>
+
+
+    </main>
+</body>
+
+</html>

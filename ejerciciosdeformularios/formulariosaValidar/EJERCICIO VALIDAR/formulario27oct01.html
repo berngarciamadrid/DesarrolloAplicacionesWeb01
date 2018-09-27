@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario 27 Octubre 2017</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        body {
+            background-color: darkolivegreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+        }
+        
+        main {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 3%;
+            background-color: darkolivegreen;
+            opacity: 0.9;
+            border-radius: 20px;
+            color: white;
+            height: 1500px;
+        }
+        
+        button {
+            margin-left: 30%;
+            border-radius: 20px;
+            background-color: darkblue;
+            color: white;
+            opacity: 0.9;
+        }
+        
+        div {
+            background: #20BFB7;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            background-image: url('taylor-swift-300.jpg');
+        }
+        
+        h4,
+        input,
+        p {
+            text-align: center;
+            padding-top: 10px;
+        }
+        
+        input,
+        textarea {
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        
+        input[type="button"] {
+            border-radius: 25px;
+            border: 2px solid darkolivegreen;
+            font-family: 'Montserrat', sans-serif;
+            background-color: forestgreen;
+            color: white;
+        }
+        
+        input[type="submit"] {
+            border-radius: 25px;
+            border: 2px solid darkolivegreen;
+            font-family: 'Montserrat', sans-serif;
+            background-color: forestgreen;
+            color: white;
+        }
+        
+        hr {
+            width: 100px;
+            border-bottom-color: crimson;
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <script>
+        /* Vamos a crear con formulario con los componentes más usuales, 
+                                                editor de texto , area de texto , un conjunto de radiobotones,
+                                                 un par de checkbox , y una lista desplegable . 
+                                                 Colocaremos un botón , al hacer click sobre el , 
+                                                 recogeremos la información introducida por el usuario y la mostraremos en un div */
+
+        function CargaPagina() {
+            document.getElementById("idtexto").focus(); //Asignar foco al elemento
+        }
+
+        function MuestraInformacion() {
+            //-----------------TEXT-----------------------------------------
+            var valor = document.getElementById("idtexto").value; // hola
+            // var valor = document.nameform1.nametexto.value; // hola
+            // alert(valor);
+            // var valor = document.form1.texto.size; //50
+            // var valor = document.form1.texto.maxlength; //50
+            document.getElementById("resultado").innerHTML += '<p>' + 'idtexto=' + valor + ' </p>' + '</br>';
+            //------------------TEXTAREA ---------------------------------------
+            var valor = document.getElementById("idparrafo").value; //hola
+            // var valor = document.nameform1.nameparrafo.value; // hola
+            // alert(valor);
+            document.getElementById("resultado").innerHTML += '<p>' + 'idparrafo=' + valor + '<p>' + '</br>';
+            //------------------RADIOBUTTONS ---------------------------------------
+            var elementos = document.getElementsByName("namepregunta");
+            for (var i = 0; i < elementos.length; i++) {
+                if (elementos[i].checked == true)
+                    document.getElementById("resultado").innerHTML += '<p>' + " RadioButton Seleccionado: " + elementos[i].value + '</p>' + ' </br>';
+            }
+            //--------------CHECKBOX---------------------------------------------------
+            var elemento = document.getElementById("idcondiciones");
+            if (elemento.checked == true)
+                document.getElementById("resultado").innerHTML += '<p>' + " CheckBox Seleccionado: " + elemento.value + '</p>' + '</br>';
+            elemento = document.getElementById("idprivacidad");
+            if (elemento.checked == true)
+                document.getElementById("resultado").innerHTML += '<p>' + " CheckBox Seleccionado: " + elemento.value + '</p>' + ' </br>';
+            //------------------SELECT----------------------------------------------------
+            // Obtener la referencia a la lista
+            var lista = document.getElementById("idopciones");
+            // Obtener el índice de la opción que se ha seleccionado
+            var indiceSeleccionado = lista.selectedIndex;
+            // Con el índice y el array "options", obtener la opción seleccionada
+            var opcionSeleccionada = lista.options[indiceSeleccionado];
+            // Obtener el valor y el texto de la opción seleccionada
+            var textoSeleccionado = opcionSeleccionada.text;
+            var valorSeleccionado = opcionSeleccionada.value;
+            //alert("Opción seleccionada: " + textoSeleccionado + "\n Valor de la opción: " + valorSeleccionado);
+            document.getElementById("resultado").innerHTML += '<p>' + " Opción Select seleccionada: " + textoSeleccionado + "<br> Valor de la opción: " + valorSeleccionado + '</p>' + '</br>';
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <main>
+        <form name="nameform1" id="form1" action="#"></form>
+        <h4>Cuadro de texto</h4>
+        <hr>
+        <br>
+        <input type="text" name="nametexto" id="idtexto" cols="50" rows="5" value="hola" size="50" maxlength="50">
+
+        <br><br>
+        <h4>textarea</h4>
+        <hr><br>
+        <textarea name="nameparrafo" id="idparrafo" cols="50" rows="5"></textarea>
+        <br><br>
+        <h4>Radio button</h4>
+        <hr><br>
+        <p><input type="radio" name="namepregunta" id="si"> SI
+            <input type="radio" name="namepregunta" id="no"> NO
+            <input type="radio" name="namepregunta" id="nsnc"> NS/NC
+        </p>
+        <br><br>
+        <h4>Check Box</h4>
+        <hr><br>
+        <input type="checkbox" name="contrato" id="idcondiciones">
+        <p>He leído la política y las condiciones</p>
+        <input type="checkbox" name="contrato" id="">
+        <p>He leído la política de privacidad</p>
+        <br><br>
+        <h4>Select</h4>
+        <hr><br>
+        <p>
+            <select name="idopciones" id="nameopciones">
+                    <option value="1">Primer valor</option>
+                    <option value="2">Segundo valor</option>
+                    <option value="3">Tercer valor</option>
+                    <option value="4">Cuarto valor</option>
+                </select>
+        </p>
+        <br><br>
+        <!--en un formulario el botón enviar debería ser de type=submit, lo cambio a 
+            type="button" para poder ver los resultados en el div con el id="resultado" -->
+        <input type="button" value="Púlsame" onclick="MuestraInformacion()"><br><br>
+        <input type="submit" value="Enviar" name="Submit" onclick="MuestraInformacion();return false"><br><br>
+        <input type="submit" value="Enviar" name="Submit" onclick="this.disabled=true;this.value='Enviando...';this.form.submit()"><br><br>
+        <input type="button" value="Enviar" name="Submit" onclick="this.disabled=true;this.value='Enviando...';this.form.submit()"><br><br>
+
+        </form>
+        <br><br>
+        <section id="resultado"></section>
+
+
+    </main>
+
+
+</body>
+
+</html>

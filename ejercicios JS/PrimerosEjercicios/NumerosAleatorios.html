@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejercicio Javascript 19 Octubre 2017</title>
+<style>
+
+body{
+    background-color:dodgerblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darksalmon;
+    opacity:0.6;
+}
+
+
+</style>
+</head>
+<body>
+<main>
+<script>
+document.write("Hola soy Shin Chan, Nanako, a ver si adivinas el número" + "<br>")
+var numAleatorio=Math.round(Math.random()*100);
+var descNumero
+do{
+    descNumero=prompt(" Descubre el número entre el 0 y el 100, en enteros");
+    if (descNumero<numAleatorio){
+        alert("El número es mayor, uo, uo, intenta de nuevo, Nanako");
+    }else{
+        if(descNumero>numAleatorio){
+            alert("El número es menor, uo, uo, intenta de nuevo, Nanako");
+        }
+    }
+}while(descNumero!=numAleatorio)
+document.write("Has acertado, uo, uo, Nanako qué inteligente eres" + "<br>" + "el número es: " + numAleatorio);
+</script>
+
+
+</main>
+
+
+</body>
+</html>

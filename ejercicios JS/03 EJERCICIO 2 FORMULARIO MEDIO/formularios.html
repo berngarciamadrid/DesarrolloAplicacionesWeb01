@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Formularios</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+
+    <script>
+    
+    function enviar(n,ape,usua,contra,lect,tele,musi,cin,dorm,masc){
+        alert("tu nombre es: " + n + " "+  "apellidos: " + ape + "\n" + "usuario: " + usua + "\n"
+        + " con contraseña: " + contra + "\n" + "tus aficiones: " + lect + " "+ tele + " " + musi + " "
+        + cin + " "+ dorm + " "+ masc + " "+"\n"+ "gracias por todo")
+    }
+    
+    
+    
+    </script>
+</head>
+
+<body bgcolor="#CCCCFF">
+	<p>Vamos a ver un ejemplo de cómo hacer un formulario.</p>
+    </br></br>
+    <p>.</p>
+    <p>&nbsp;</p>
+    <p>Introduce tus datos para darte de alta:</p>
+    <form action="mailto:kelakian@gmail.com" method="post" enctype="text/plain">
+    	<fieldset>
+        	<legend>Datos</legend>
+            <fieldset>
+        		<legend>Datos obligatorios</legend>
+                <!--Nombre, apellidos, usuario y contraseña de la persona-->
+                <label for="nombre">>Nombre:</font></label>
+                <input class="flotar_dcha" name="nombre" id="nombre" size="45" maxlength="30" />
+                </br></br>
+                <label class="flotar_dcha_dos" for="apellidos"><font color="#006666">Apellidos:</font></label>
+                <input class="flotar_dcha" name="apellidos" id="apellidos" size="45" maxlength="30" />
+                </br></br>
+                <label class="flotar_dcha_dos" for="usuario"><font color="#006666">Usuario:</font></label>
+                <input class="flotar_dcha" name="usuario" id="usuario" size="45" maxlength="25" />
+                </br></br>
+                <label class="flotar_dcha_dos"  for="contrasena"><font color="#006666">Contraseña:</font></label>
+                <input class="flotar_dcha" type="password" name="contrasena" id="contrasena" size="45" maxlength="15" />
+        	</fieldset>
+            
+            
+       		<fieldset>
+         		<legend>Datos opcionales</legend>
+                <!--Resto de datos de la persona-->
+            
+                <label for="" class="titulo">Dime tus aficiones</label>
+                    <hr />
+                <div class="flotante_izda">
+<label for="lectura">Leer</label>
+<input type="checkbox" name="lectura" id="lectura"/>
+<label for="television">tv</label>
+<input type="checkbox" name="television" id="television"/>
+<label for="musica">Escuchar música</label>
+<input type="checkbox" name="musica" id="musica"/>
+<label for="cine">Ir al cine</label>
+<input type="checkbox" name="cine" id="cine"/>
+<label for="dormir" > Dormir la siesta</label>
+<input type="checkbox"  name="dormir"/>
+
+    
+              
+     <label for="mascota" class="titulo">¿Qué mascota prefiere?</font></label>
+         <hr /> 
+                <select name="mascota" id="mascota">
+                	<option value="Seleccione uno" selected="selected">--Seleccione uno--</option>
+                    <optgroup label="Mamíferos">
+                    	<option value="Perro">Perro</option>
+                    	<option value="Gato">Gato</option>
+                    	<option value="Conejo">Conejo</option>
+                    </optgroup>
+                    <optgroup label="Otros">
+                    	<option value="Loro">Loro</option>
+                    	<option value="Pez">Pez</option>
+                    </optgroup>
+                </select>
+           
+                <label for="comentario" class="titulo">Observaciones:</font></label>
+                     <hr />
+                <textarea placeholder="hola escribe" name="comentario" id="comentario" rows="10" cols="50"></textarea>
+        	</fieldset>
+            </br>
+            <input type="submit" id="btnenviar" value="Enviar" onClick="enviar(nombre.value,apellidos.value,usuario.value,contrasena.value,lectura.value,television.value,musica.value, cine.value, dormir.value, mascota.value)"/>
+            <!--input type="hidden" id="cancelar" value="Cancelar" /-->
+            <input type="reset" id="restaurar" value="Restaurar" />
+        </fieldset>
+    </form>
+</body>
+</html>

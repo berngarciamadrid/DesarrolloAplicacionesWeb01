@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mi cuarto Jquery</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+    background-color:whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darksalmon;
+    opacity:0.9;
+    border-radius:20px;
+}
+
+img{
+    margin-left:30%;
+}
+
+button{
+    margin-left:30%;
+    border-radius: 20px;
+    background-color:darkblue;
+    color: white;
+    opacity:0.9;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    height: 300px;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.test{
+    text-align: center;
+    text-indent: 20px;
+}
+
+#parrafin{
+    background-image:url(taylor-swift-300.jpg);
+}
+
+header{
+    height: 150px;
+    background-color:#DD8183;
+}
+
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+ $("button").click(function(){
+     $("p.test").hide(10000);
+ });
+
+}) ; 
+        
+        
+</script>
+<script>
+
+window.addEventListener('load',inicio,false);
+function inicio(){
+    document.getElementById('parrafin').addEventListener('mouseover',presion1,false); 
+    document.getElementById('parrafin').addEventListener('mouseout',presion2,false);
+}
+
+function presion1()
+  {
+    document.getElementById('parrafin').innerHTML='';
+  }
+
+  function presion2()
+  {
+    document.getElementById('parrafin').innerHTML='Este párrafo no tiene class';
+  }
+
+
+</script>
+
+
+</head>
+<body>
+<main>
+<header>
+    <h2 class="test">Texto 1 para ocultar</h2><br>
+</header>
+    <h2 class="test">Texto 2 para ocultar</h2><br>
+    <p class="test">párrafo con clase test pero no está dentro del header</p>
+    <p id="parrafin"> Este párrafo no tiene class</p>
+
+<button>Pincha para eliminar el elemento con clase test que está dentro de Header</button>
+
+
+
+
+</main>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Filtro en cualquier cosa</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--Librerías de CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+    <!--Librerías de Javascript y JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Style the input field */
+        
+        #myInput {
+            padding: 20px;
+            margin-top: -6px;
+            border: 0;
+            border-radius: 0;
+            background: #f1f1f1;
+        }
+        
+        main {
+            margin-top: 10%;
+            margin-left: 20%;
+            margin-right: 20%;
+            background-color: lightblue;
+        }
+        
+        body {
+            background-color: lightblue;
+        }
+        
+        .form-control {
+            width: 50%;
+        }
+        
+        .btn {
+            margin-right: 15%;
+            margin-left: 5%;
+        }
+    </style>
+
+</head>
+
+<!--El Body-->
+
+<body>
+    <main>
+        <div class="container">
+            <h2>Filter Anything</h2>
+            <p>Escribe algo relacionado con lo que haya puesto</p>
+            <input class="form-control" id="myInput" type="text" placeholder="Buscar..">
+            <div id="myDIV">
+                <p>Soy un parrafo.</p>
+                <div>Soy un div dentro de otro div.</div>
+                <button class="btn">Soy un boton</button>
+                <button class="btn btn-info">otro boton</button>
+                <p>Otro parrafo</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function() {
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myDIV *").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

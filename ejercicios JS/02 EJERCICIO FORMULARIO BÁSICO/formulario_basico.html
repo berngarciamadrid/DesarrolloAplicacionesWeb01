@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario web 01</title>
+<link rel="stylesheet" href="css/estilos_generales.css">
+<script>
+function enviar(n,m,c){
+	alert('Bienvenido ' + n + ' con correo: ' + m + ' que nos conociste' + e);
+	}
+</script>
+</head>
+
+<body>
+<form method="post" action="">
+<div><label for="nombre">Nombre:</label><input type="text" name="nombre" id="nombre" size="15" class="flotar_derecha"></div>
+
+<div contenteditable=""><label for="miemail"> Correo electrónico:</label><input type="email" name="miemail" id="miemail"size="15" class="flotar_derecha"></div>
+
+<div><label for="myemail"> Repite tu correo:</label><input type="email" name="myemail" id="myemail"size="15" class="flotar_derecha"></div>
+
+<div><label for:"nos_conociste"> Cómo nos conociste</label>
+<select name="nos_conociste" class="flotar_derecha"  >
+ <option>
+ por un amigo
+ </option>
+ <option>
+ por web
+ </option>
+ <option>
+ por el vecino
+ </option>
+ <option>
+ por prensa
+ </option>
+ <option>
+otros
+ </option>
+</select></div>
+
+<div><div class="flotar_izda"><label for="pregunta">tu pregunta es referente a:</label></div>
+	<div class="flotar_izda"><input type="checkbox" name="pregunta" id="pregunta"> la web <br/>
+	<input type="checkbox" name="pregunta" id="pregunta"> la asociación<br/>
+	<input type="checkbox" name="pregunta" id="pregunta"> las fotos<br/>
+    </div></div>
+    <div>
+<label for="escribe">Escrribe aquí lo que quieras preguntarnos:</label>
+
+<textarea cols="36" rows="4"> </textarea></div>
+
+<input class="flotar_derecha" type="reset" value="Borrar">
+<input class="flotar_derecha" type="submit" value="enviar" onClick="enviar(nombre.value,miemail.value,nos_conociste.value)">
+</form>
+</body>
+</html>

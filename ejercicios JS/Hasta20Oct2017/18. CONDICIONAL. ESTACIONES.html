@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<SCRIPT LANGUAGE="JavaScript"> 
+ function Calcular(d,m) { 
+día=parseInt(d); 
+mes=parseInt(m); 
+if ((m==1)||(m==2)) 
+ estacion="INVIERNO"; 
+if ((m==4)||(m==5)) 
+ estacion="PRIMAVERA"; 
+if ((m==7)||(m==8)) 
+ estacion="VERANO"; 
+if ((m==10)||(m==11)) 
+ estacion="OTOÑO"; 
+if (m==3) 
+ if (d<=21) 
+ estacion="INVIERNO"; 
+ else 
+ estacion="PRIMAVERA"; 
+if (m==6) 
+ if (d<=21) 
+ estacion="PRIMAVERA"; 
+ else 
+ estacion="VERANO"; 
+if (m==9) 
+ if (d<=21) 
+ estacion="VERANO"; 
+ else 
+ estacion="OTOÑO"; 
+if (m==12) 
+ if (d<=21) 
+ estacion="OTOÑO"; 
+ else 
+ estacion="INVIERNO"; 
+alert("Naciste en: "+estacion); 
+} 
+ </SCRIPT> 
+</head>
+
+<body>
+Esta es mi página con un mensaje de bienvenida hecho en Javascript 
+<form> 
+ Introduce tu día de nacimiento: <input type="text" name="dia" size=3><br> 
+ Introduce tu mes de nacimiento en número: <input type="text" name="mes" size=3><br>
+ <input type="button" name="Estacion" value="Estación" 
+ onclick="Calcular(dia.value,mes.value)"> 
+</form> 
+</body>
+</html>

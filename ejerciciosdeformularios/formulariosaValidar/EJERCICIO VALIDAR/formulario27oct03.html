@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Ejemplo 27 Octubre 2017</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        body {
+            background-color: darkolivegreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+        }
+        
+        main {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 3%;
+            background-color: darkolivegreen;
+            opacity: 0.9;
+            border-radius: 20px;
+            color: white;
+            height: 1500px;
+        }
+        
+        p {
+            text-align: center;
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <script>
+        function validateForm() {
+            var x = 0;
+            var longitud = document.forms["myForm"].elements.length;
+            for (x = 0; x < longitud - 1; x++) {
+                document.write("<p>" + document.forms["myForm"][x].value + "</p>" + "<br>");
+                var y = document.forms["myForm"][x].value;
+                if (y == '') {
+                    alert("Recuerda introducir todos los campos");
+                }
+            }
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <main>
+        <form name="myForm" action="" method="post">
+            Name:
+            <input type="text" name="fname" id="nomb"> Surname:
+            <input type="text" name="fsurn" id="surn"> Text:
+            <input type="text" name="ftext" id="txt1"> Text2:
+            <input type="text" name="ftext1" id="txt2"> Text3:
+            <input type="text" name="ftext2" id="txt3"> Text4:
+            <input type="text" name="ftext3" id="txt4"> Text5:
+            <input type="text" name="ftext4" id="txt5">
+
+            <input type="submit" value="Submit" onclick="validateForm()">
+
+
+
+
+        </form>
+
+    </main>
+
+
+</body>
+
+</html>

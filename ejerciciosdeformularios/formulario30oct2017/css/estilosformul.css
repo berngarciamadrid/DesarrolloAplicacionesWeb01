@@ -1,0 +1,28 @@
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+ body {
+     background-color: rgba(36, 53, 123, 1);
+     font-weight: 700;
+     color: rgba(255, 255, 255, 1);
+ }
+ 
+ form {
+     width: 90%;
+     height: 800px;
+     border-bottom-color: rgba(0, 153, 204, 1);
+     border-bottom: 2px solid;
+     margin: auto;
+ }
+ 
+ h2 {
+     font-weight: 900;
+ }
+ 
+ label {
+     width: 30%;
+     display: inline-block;
+     text-align: right;
+ }
+ 
+ div {
+     margin: 8px 0px 5px 8px;
+ }

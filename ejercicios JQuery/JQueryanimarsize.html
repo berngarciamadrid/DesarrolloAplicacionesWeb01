@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQuery Slides</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+    background-color:whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darkolivegreen;
+    opacity:0.9;
+    border-radius:20px;
+    color:white;
+    height:1500px;
+}
+
+
+button{
+    margin-left:30%;
+    border-radius: 20px;
+    background-color:darkblue;
+    color: white;
+    opacity:0.9;
+}
+
+div{
+    background: #20BFB7;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+      $("div").animate({
+          left:'300px',
+          opacity:'0.5',
+          height:'350px',
+          width:'350px',
+
+      })
+  })
+});
+
+ 
+        
+        
+</script>
+
+
+
+</head>
+<body>
+<main>
+<button>pulsa para agrandarlo y moverlo</button>
+<div></div>
+
+
+
+
+</main>
+
+
+</body>
+</html>

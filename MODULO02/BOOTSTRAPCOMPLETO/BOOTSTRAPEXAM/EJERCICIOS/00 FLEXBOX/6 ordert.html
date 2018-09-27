@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+.rojo{
+	background-color:rgba(255,0,0,1);
+	
+	}
+.verde{
+	background-color:rgba(0,204,0,1);
+
+	}
+.azul{
+	background-color:rgba(0,51,153,1);
+
+	}
+.amarillo{
+	background-color:rgba(255,255,0,1);
+	order:4 /*El order cambia el orden de los elementos respecto a la caja padre. ojo! NO HACE FALTA PONER UN ORDER A CADA UNO DE LOS ITEMS*/
+	
+	}
+.main{
+	width:700px;
+	height:150px;
+	border:1px solid rgba(255,0,0,1);
+	display:flex;
+	flex-wrap:wrap; /*distribuye los elemento de la caja da el ancho de la caja según su contenido*/
+	align-content:center; /*permite al wrap que se reconozca un ancho y un alto
+	permite alinear los elementos wrap*/
+	
+}
+.main div{
+	width:70px;
+	height:70px;}
+</style>
+</head>
+
+<body>
+<div class="main">
+<div class="amarillo">1</div>
+<div class="azul">2</div>
+<div class="rojo">3</div>
+<div class="verde">4</div>
+
+</div>
+</body>
+</html>

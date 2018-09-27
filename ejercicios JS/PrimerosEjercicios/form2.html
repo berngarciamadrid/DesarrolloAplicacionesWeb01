@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title>
+    <style>
+        body {
+            background-color: #CCCCFF;
+        }
+
+        div {
+            width: 600px;
+            margin: auto;
+        }
+
+        .espacio {
+            margin: 5px;
+        }
+
+        .izquierda {
+            width: 50%;
+        }
+
+        .sinraya {
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0px;
+        }
+        .azul {
+            color: darkcyan;
+        }
+
+    </style>
+    <script>
+        function mostrarDatos(fnombre, fapellidos, fuser, fpassword, fcheck, fmascota) {
+            alert(fnombre+"\n"+fapellidos+"\n"+fuser+"\n"+fpassword+"\n"+fcheck+"\n"+fmascota);
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form>
+            <fieldset>
+                <legend>Datos
+                </legend>
+                <fieldset>
+                    <legend>Datos Obligatorios</legend>
+                    <table>
+                        <tr>
+                            <td class="izquierda azul">
+                                Nombre:
+                            </td>
+                            <td><input id="nombre" type="text" size="40">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="izquierda azul">
+                                Apellidos:
+                            </td>
+                            <td><input id="apellidos" type="text" size="40">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="izquierda azul">
+                                Usuario:
+                            </td>
+                            <td><input id="user" type="text" size="40">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="izquierda azul">
+                                Contraseña:
+                            </td>
+                            <td><input id="password" type="text" size="40">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="rayita"></td>
+                        </tr>
+                        <tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos Opcionales</legend>
+                    <fieldset class="sinraya">
+                        <legend>
+                            <h4>Dime tus aficiones</h4>
+                        </legend>
+                        <input type="radio" name="afic" value="Dormir la siesta">Dormir la siesta<br>
+                        <input type="radio" name="afic" value="Leer">Leer<br>
+                        <input type="radio" name="afic" value"=television">TV<br>
+                        <input type="radio" name="afic" value="musica">Escuchar musica<br>
+                        <input type="radio" name="afic" value="cine">Ir al cine<br>
+                        <hr>
+                        <label for="mascota" class="azul">¿Qué mascota prefiere?<br></label>
+                        <select name="mascota">
+                            <option selected disabled>--Seleccione Uno--</option>
+                            <option>Perros</option>
+                            <option>Gatos</option>
+                            <option>Pulpos</option>
+                            <option>Ornitorrincos</option>
+                        </select>
+                        <hr>
+                        <label for="observaciones" class="azul">Observaciones</label>
+                        <textarea name="observaciones" rows="5" cols="65" placeholder="introduzca observaciones, pero que sean agudas"></textarea>
+                    </fieldset>
+                </fieldset>
+                <input type="submit" class="espacio" value="Enviar" onclick="mostrarDatos(nombre.value, apellidos.value, user.value, password.value, afic.value, mascota.value)">
+                <input type="reset" class="espacio" value="restaurar">
+            </fieldset>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

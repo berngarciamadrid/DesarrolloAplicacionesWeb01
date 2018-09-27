@@ -1,0 +1,1 @@
+https://diego.com.es/comparacion-de-strings-en-php

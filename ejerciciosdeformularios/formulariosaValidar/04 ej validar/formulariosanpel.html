@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Sanpel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: whitesmoke;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url('img/tacon.png');
+            background-position: right;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        
+        #botoncito {
+            background-color: red;
+            text-transform: uppercase;
+            border-radius: 25px;
+            text-align: center;
+            height: 70px;
+            width: 18%;
+            font-weight: bold;
+            background-image: url('img/boton.png');
+            background-repeat: no-repeat;
+            background-position-y: 5px;
+            background-position-x: 10px;
+            margin-left: 40%;
+            font-size: 17px;
+            box-shadow: 5px 5px 5px #888888;
+        }
+        
+        #botoncitodos {
+            text-transform: uppercase;
+            text-align: center;
+            height: 20px;
+            width: 9%;
+            margin-left: 45%;
+            font-size: 15px;
+            margin-top: 0%;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        form {}
+        
+        fieldset {
+            opacity: 0.6;
+            background-color: lightgrey;
+            margin-top: 10px;
+            width: 45%;
+            margin-left: 30%;
+            margin-right: 25%;
+        }
+        
+        legend {
+            background-color: black;
+            color: white;
+            height: 25px;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 3px;
+            text-align: center;
+            text-align: -moz-center;
+        }
+        
+        input {
+            margin-top: 15px;
+            margin-left: 100px;
+        }
+        
+        strong {
+            color: red;
+        }
+        
+        .flotarizq {
+            float: left;
+            width: 25%;
+        }
+        
+        .flotardcha {
+            float: right;
+            width: 75%;
+        }
+        
+        #flotarizqdos {
+            float: left;
+            width: 56%;
+        }
+        
+        #flotardchados {
+            float: right;
+            width: 44%;
+        }
+        
+        input:hover {
+            border-color: black;
+        }
+        
+        img {
+            position: absolute;
+            z-index: 1;
+            top: 200px;
+            transform: rotate(350deg);
+        }
+        
+        #botoncito:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <script>
+        window.addEventListener('load', iniciarEventos, false);
+
+        function iniciarEventos() {
+            var capullin = document.getElementById('botoncito');
+            capullin.addEventListener('click', presionBoton, false);
+        }
+
+        function presionBoton(e) {
+            var ocultarrrr = document.getElementById('botoncitodos');
+            ocultarrrr.style.display = "none";
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <br><br>
+    <img src="img/zapateria-de-encargo-sanpel-logo.png" alt="zapateria_sanpel">
+    <h2>Aprovecha estos días de descuento</h2>
+    <form>
+        <fieldset>
+            <legend align="center">Datos Personales</legend>
+            <section class="flotarizq">
+                <label for="nombre">
+                    Nombre<strong>*</strong></label><br><br>
+                <label for="apellidos">
+                    Apellidos<strong>*</strong></label><br><br>
+                <label for="direccion">
+                    Dirección<strong>*</strong></label><br><br>
+                <label for="nombre">
+                    E-Mail<strong>*</strong></label><br><br>
+            </section>
+            <section class="flotardcha">
+                <input type="text" id="nombre"><br>
+                <input type="text" id="apellidos"><br>
+                <input type="text" id="direccion"><br>
+                <input type="email" id="emilio">
+            </section>
+
+
+
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend align="center">Encargar el Zapato</legend>
+            <section id="flotarizqdos">
+                <label for="modelo">
+    Elige </label><input type="text" id="modelo" placeholder="plano/tacón/fiesta"><br> tu Modelo:
+                <label for="fechaentrega"><br>
+        Fecha de </label> <input type="date" id="fechaentrega"><br> entrega:
+            </section>
+            <section id="flotardchados"><br>
+                <label for="couleur">
+                        Elige el color:</label><input type="color" id="couleur"><br>
+                <label for="hora">
+             E-Mail</label><input type="time" id="hora">
+            </section>
+
+
+
+
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend align="center">Forma de Pago</legend>
+            <label for="formapago">
+                    Elige tu modelo: </label><input type="radio" id="efectivo" name "formapago" value="efectivo"> Efectivo
+            <input type="radio" id="tarjeta" name "formapago" value="tarjeta"> Tarjeta
+            <br>
+            <label for="cuenta">
+                    Datos de la cuenta:</label><input type="cuenta" id="hora"><br><br>
+
+        </fieldset>
+        <br><br>
+        <input type="button" id="botoncito" value="comprar">
+        <input type="reset" id="botoncitodos" value="restablecer">
+    </form>
+
+
+
+</body>
+
+</html>

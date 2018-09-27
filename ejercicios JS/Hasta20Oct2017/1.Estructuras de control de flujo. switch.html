@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+<!-- empleados antiguedad menor 5 años:1000€
+empleados antiguedad entre 5 y 20años:5000€
+empleados antiguedad entre 20 y 30 años:10.000€
+empleados antiguedad mayor a   30 años:20.000€
+-->
+<script>
+var ant=prompt("¿cuantos años llevas en la empresa?");
+switch(true){
+	case ant<=5:
+	alert("incentivo de 1.000€")
+	break;
+	case ant>5 && ant<10:
+	alert("incentivo de 5.000€")
+	break;
+		case ant>10 && ant<20:
+	alert("incentivo de 10.000€")
+	break;
+		case ant>20 && ant<30:
+	alert("incentivo de 20.000€")
+	break;
+		case ant>=30:
+	alert("incentivo de 50.000€")
+	break;
+	default:
+	alert("no perteneces a esta empresa, NO HAY INCENTIVO BONITO")}
+</script>
+</body>
+</html>

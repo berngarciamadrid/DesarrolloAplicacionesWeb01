@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Ejemplo 04 27 Octubre 2017</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        body {
+            background-color: darkolivegreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+        }
+        
+        main {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 3%;
+            background-color: darkolivegreen;
+            opacity: 0.9;
+            border-radius: 20px;
+            color: white;
+            height: 1500px;
+        }
+        
+        p {
+            text-align: center;
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+    <main>
+
+        <h2>Validación númerica </h2>
+        <p>Por favor introduce un número entre el 1 y el 10</p>
+        <input type="text" id="numb">
+        <input type="submit" value="Submit" onclick="miFuncion()">
+        <p id="demo"></p>
+
+        <script>
+            function miFuncion() {
+                var x, text;
+                x = document.getElementById("numb").value;
+
+                if (isNaN(x) || x < 1 || x > 10) {
+                    text = "Dato no válido";
+                } else {
+                    text = "Dato válido";
+                }
+                document.getElementById('demo').innerHTML = text;
+            }
+        </script>
+
+    </main>
+
+
+</body>
+
+</html>

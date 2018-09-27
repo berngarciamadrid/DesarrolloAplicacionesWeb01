@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script>
+	function alumno(n,a,no){
+		alert("hola "+n +" "+ a+ "tu nota ha sido: "+no);}
+	function apellido(a){
+		alert("tu apellido es: " + " "+ a)}
+</script>
+</head>
+
+<body>
+<form>
+  <label>¿Cuál es tu nombre?</label>
+  <input type="text" name="nombre"><br>
+  <label>¿Cuales son tus apellidos?</label>
+  <input type="text" name="apellidos"><br>
+  <label>¿Qué nota has sacado?</label>
+  <input type="text" name="nota"><br>
+  <input type="submit" value="enviar" onClick="alumno(nombre.value,apellidos.value,nota.value)">
+  <input type="submit" value="dime tu apellido" onClick="apellido(apellidos.value)">
+</form>
+</body>
+</html>

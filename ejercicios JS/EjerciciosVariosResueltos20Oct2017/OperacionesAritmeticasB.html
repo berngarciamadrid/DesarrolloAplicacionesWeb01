@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Operaciones Aritméticas</title>
+<style>
+
+body{
+    background-color:dodgerblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darksalmon;
+    opacity:0.6;
+}
+
+minisection{
+    float:left;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+ 
+    
+}
+h1{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    padding-left:30%;
+}
+
+input{
+    background-color:darkolivegreen;
+}
+
+</style>
+</head>
+<body>
+<main>
+<section id="minisection"><h1>Operaciones Matemáticas</h1></section>
+<form action="" method="post" id="formulario">
+    <fieldset><legend>Pequeño formulario</legend>
+        Número 1<br><input type="text" id="num1" name="num1"><br>
+        Número 2<br><input type="text" id="num2" name="num2"><br>
+        Escriba la Operacion,(suma,mult,rest,) por favor:<br><input type="text" id="operacion" name=""><br>
+        Enviar:<br><input type="submit" id="enviando" name="botonenvio" value="Enviar" onClick="Operation(num1.value,num2.value, operacion.value)"><br>
+        Resultado:<br><script>
+            function Operation(n1,n2,ope){
+                if(ope=="suma"){
+                   var resultado=parseInt(n1)+parseInt(n2);
+                   document.write("el resultado de la operación es: " + resultado); 
+                }else if(ope=="resta"){
+                   var resultado=parseInt(n1-n2); 
+                   document.write("el resultado de la operación es: " + resultado); 
+                }else if(ope=="multiplicacion"){
+                   var resultado=parseInt(n1*n2);
+                   document.write("el resultado de la operación es: " + resultado); 
+                }else if(ope=="division"){
+                   var resultado=parseInt(n1/n2); 
+                   document.write("el resultado de la operación es: " + resultado); 
+                }
+                
+            }
+            
+            
+        </script><input type="text" id="resolution" name="verificar"></script><br>
+    </fieldset>
+</form>
+
+</main>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<script type="text/javascript">
+/*OJO para que no vuelva a preguntar , una vez hayas decubierto el número, podemos utilizar:
+- solo if (CÓMO EN EL EJERCICIOS DE ESTE DOCUMUENTO)
+- ó primero un if y luego un else if
+
+
+Si lo hacemos con un if else, normal, NO SALE*/
+var descubrirnumero=Math.round(Math.random()*100);
+
+var numerointroducido;
+do{
+	numerointroducido=prompt("Escribe un número a ver si descubres cual es", "");
+	if(numerointroducido>descubrirnumero){
+		alert("no, es un  numero menor","")}
+ if(numerointroducido<descubrirnumero) {alert("no ,es un numero mayor","")}
+	}while(numerointroducido!=descubrirnumero);
+	alert( "Correcto!!!! el numero es " + descubrirnumero)
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+form{
+	width:600px;
+	left:0px;
+	right:0px;
+	margin:0 auto;
+}
+
+label{
+	display:block;
+	
+}
+.flotar_dcha{
+	float:right;
+	margin-top:-20px;
+}
+.flotar_dcha_dos{
+	
+	margin-top:-30px;
+}
+h3{
+	float:left;
+	display:inline-block;
+	width:150px;
+}
+.flotante_izda{
+	float: left;
+	width:400px;}
+	.titulo {
+		color:#006666;}
+		hr{
+			padding-left:0px;
+			color:rgba(255,255,255,1);
+			width:150px;}

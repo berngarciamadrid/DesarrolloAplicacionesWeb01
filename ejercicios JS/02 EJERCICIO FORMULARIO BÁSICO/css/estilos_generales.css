@@ -1,0 +1,33 @@
+@charset "utf-8";/* CSS Document */
+*{margin:0;
+padding:0;}
+body{background-color: #FCC;
+}
+form{
+	margin:0 auto;
+	width:280px;
+	height:430px;
+	background-color:#990;
+	border-radius:10px;
+	border:#F00 solid 3px;
+	display:block;
+}
+div{
+	border-bottom:#FFF solid 1px;
+	width:270px;
+	padding:7px 3px 7px 5px;
+	display:inline-block;
+	
+}
+.flotar_derecha{
+	float:right;
+
+	display:inline-block;
+	margin:5px 8px;
+}
+.flotar_izda{
+	float:left;
+	width:120px;
+	border-bottom:hidden;
+	
+}

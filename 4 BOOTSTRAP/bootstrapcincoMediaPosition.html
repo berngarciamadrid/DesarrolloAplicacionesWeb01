@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 05 Carrusel</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--Librerías de CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: cornflowerblue;
+        }
+        
+        .item {
+            margin-right: 15%;
+            width: 100%;
+        }
+        
+        img {
+            margin-left: 30%;
+        }
+    </style>
+
+
+    <!--Librerías de Javascript y JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<!--El Body-->
+
+<body>
+    <div class="container">
+        <h2>Ejemplo de Carrusel</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="natashayarovenko001.jpg" alt="Natasha Yarovenko">
+                    <div class="carousel-caption">
+                        <h3>Natasha Yarovenko</h3>
+                        <p>Morena</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="natashayarovenko002.jpg" alt="Natasha Yarovenko">
+                    <div class="carousel-caption">
+                        <h3>Natasha Yarovenko</h3>
+                        <p>Macizorra</p>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="natashayarovenko003.jpg" alt="Natasha Yarovenko">
+                    <div class="carousel-caption">
+                        <h3>Natasha Yarovenko</h3>
+                        <p>Macizorra</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="natashayarovenko004.jpg" alt="Natasha Yarovenko">
+                    <div class="carousel-caption">
+                        <h3>Natasha Yarovenko</h3>
+                        <p>Macizorra</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

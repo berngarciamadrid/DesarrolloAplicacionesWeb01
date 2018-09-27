@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejercicio Javascript 19 Octubre 2017</title>
+<style>
+
+body{
+    background-color:dodgerblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darksalmon;
+    opacity:0.6;
+}
+
+
+</style>
+</head>
+<body>
+<main>
+<script>
+var jugador=1;
+var goles;
+var nombre;
+var masdecinco=0;
+var menosdecinco=0;
+while(jugador<=10){
+    nombre=prompt("¿Cómo se llama?");
+    goles=parseInt(prompt("Cuantos goles ha metido este jugador?"));
+    document.write("El jugador: " + nombre + " ha metido: " + goles + " goles" + "<br>");
+    jugador++;
+    if (goles>=5){
+        masdecinco=masdecinco+1;
+        
+    }else{
+        menosdecinco=menosdecinco+1;
+        
+    }
+    
+}
+
+document.write("Jugadores que han metido más de 5 goles: " + masdecinco +" <br>");
+document.write("Jugadores que han metido menos de 5 goles: " + menosdecinco + " <br>");
+
+</script>
+
+
+</main>
+
+
+</body>
+</html>

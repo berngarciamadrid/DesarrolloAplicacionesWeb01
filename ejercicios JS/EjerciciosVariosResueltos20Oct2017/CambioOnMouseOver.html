@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cambio Color Input Text</title>
+<style>
+
+body{
+    background-color:dodgerblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darksalmon;
+    opacity:0.6;
+}
+
+input{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    background-color:chocolate;
+}
+
+</style>
+</head>
+<body>
+<main>
+<script>
+function cambioColor(){
+    var botonix=document.getElementById('botoncito');
+    botonix.style.backgroundColor="forestgreen";
+}
+function vuelveColor(){
+    var botonix=document.getElementById('botoncito');
+    botonix.style.backgroundColor="chocolate";
+}
+
+</script>
+Cambiar Fondo:<input type="text" id="botoncito" name="" value="Cambiar Fondo" onmouseover="cambioColor()" onmouseout="vuelveColor()"><br><br>
+
+</main>
+
+
+</body>
+</html>

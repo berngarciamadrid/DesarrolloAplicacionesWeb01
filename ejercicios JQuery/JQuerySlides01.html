@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQuery Slides</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+    background-color:whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:black;
+    opacity:0.9;
+    border-radius:20px;
+    color:white;
+    height:1500px;
+}
+
+img{
+    margin-left:30%;
+}
+
+button{
+    margin-left:30%;
+    border-radius: 20px;
+    background-color:darkblue;
+    color: white;
+    opacity:0.9;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    height: 300px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: black;
+    color:white;
+
+}
+
+a{
+    text-decoration: none;
+    display:inline;
+    text-align:center;
+    color:white;
+    margin-left: 10%;
+   
+}
+
+#desp{
+    display:none;
+}
+
+#po{
+    text-align: center;
+}
+
+.test{
+    background-color:grey;
+    color:white;
+    opacity:0.6;
+    position:absolute;
+    margin-top:3%;
+
+}
+
+nav{
+    margin-top:3%;
+}
+
+
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#po").click(function(){
+      $("#desp").slideToggle(100);
+  });
+
+});
+
+ 
+        
+        
+</script>
+<script>
+window.onscroll = function() 
+{
+    desplazarSticky()
+    
+    };
+
+function desplazarSticky() {
+    if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+        document.getElementById("desp").className = "test";
+    } else {
+        document.getElementById("desp").className = "";
+    }
+}
+
+
+</script>
+
+
+</head>
+<body>
+<main>
+<div id="po">Menú  desplegable al pinchar</div>
+<div id="desp">
+    <header>
+        <nav>
+                <a href="">Home</a>
+                <a href="">News</a>
+                <a href="">Store</a>
+                <a href="">Bio</a>
+                <a href="">Photos</a>
+                <a href="">Music</a>
+            
+        
+        
+        </nav>
+    </header>
+</div>
+
+
+
+
+</main>
+
+
+</body>
+</html>

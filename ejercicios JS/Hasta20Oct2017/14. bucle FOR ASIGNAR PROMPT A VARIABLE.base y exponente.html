@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript">  
+function potencia (base, expon) {
+   var resul=1;
+   var cont;
+   for (cont=1;cont<=expon;cont++){
+        resul=resul*base;
+   }
+   return resul;
+}
+</script>     
+</head>
+<body>
+<script type="text/javascript">  
+var b=parseInt(prompt("introduce la base:"));
+var e=parseInt(prompt("introduce el exponente:"));
+var r=potencia (b,e);
+alert("Resultado: " + r);
+</script>     
+</body>
+</html>
+
+<!--se situan entre paréntesis las variables que utilizará com parámetros o argumentos
+Entre llaves todas las instrucciones de la funcion, que podrán utilizar los parámetros pasados ygracias al return
+
+en body la llamada a la función 
+
+Las VARIABLES: definida mediante la palabra var dentro de una función solo tendrá vigencia y podrá ser utilizada dentro de esa función.(VARIABLES LOCALES (las globales las que están fuera de la función)-->

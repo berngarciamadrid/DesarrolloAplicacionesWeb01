@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cambio de Color de Fondo y </title>
+<style>
+
+body{
+    background-color:dodgerblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darksalmon;
+    opacity:0.6;
+}
+
+form{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+}
+
+</style>
+</head>
+<body>
+<main>
+<script>
+function fondo(){
+    document.body.style.backgroundColor="#FF00FF";
+}
+
+function titulo(){
+    document.title="Es Otro Título";
+}
+
+
+
+
+
+</script>
+<form>
+    Cambiar Fondo:<input type="button" name="" value="Cambiar Fondo" onClick="fondo()"><br><br>
+    Cambiar Título:<input type="button" name="" value="Cambiar Titulo" onClick="titulo()">
+</form>
+
+</main>
+
+
+</body>
+</html>

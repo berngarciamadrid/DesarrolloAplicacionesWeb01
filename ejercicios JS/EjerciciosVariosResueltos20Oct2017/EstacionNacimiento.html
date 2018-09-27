@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cuando has nacido</title>
+<style>
+
+body{
+    background-color:dodgerblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+    background-color:darksalmon;
+    opacity:0.6;
+}
+
+minisection{
+    float:left;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+ 
+    
+}
+h1{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    padding-left:30%;
+}
+
+input{
+    background-color:red;
+}
+
+</style>
+</head>
+<body>
+<main>
+<script>
+
+   
+function fechaNac(m,d){
+if (m=="1"||m=="2" ){
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es Invierno")
+}
+if (m=="4"||m=="5" ){
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es Primavera")
+}
+
+if (m=="7"||m=="8" ){
+    alert("El mes y día en el que estamos es: " +dia+ " "+ mes + " La estación es Verano")
+}
+
+if (m=="10"||m=="11" ){
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es Otoño")
+}
+
+if(m=="3"){
+    if(dia<22){
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es Invierno")  
+    }else{
+    alert("El mes en el que estamos es: " +d+ " "+ m + " La estación es Primavera")    
+    }
+}
+if(m=="6"){
+    if(dia<22){
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es Primavera")  
+    }else{
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es Verano")    
+    }
+}
+if(m=="9"){
+    if(dia<22){
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es Verano")  
+    }else{
+    alert("El mes y día en el que estamos es: " +d+ " "+ mes + " La estación es Otoño")    
+    }
+}
+if(m=="12"){
+    if(dia<22){
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es Otoño")  
+    }else{
+    alert("El mes y día en el que estamos es: " +d+ " "+ m + " La estación es invierno")    
+    }
+}
+
+}
+</script>
+<section id="minisection"><h1>Fecha de Nacimiento</h1></section>
+<form action="" method="post" id="formulario">
+    <fieldset><legend>Pequeño formulario</legend>
+        Mes en que naciste, en número<br><input type="text" id="mes" name="mes"><br>
+        Día en que naciste, en número<br><input type="text" id="dia" name="dia"><br>
+        Resultado:<br><input type="submit" id="enviar" name="botonenvio" value="Enviar" onClick="fechaNac(mes.value,dia.value)"><br>
+    
+    </fieldset>
+</form>
+
+</main>
+
+
+</body>
+</html>

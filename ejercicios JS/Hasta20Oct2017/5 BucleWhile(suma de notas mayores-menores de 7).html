@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+<script>
+var nmayor=0;
+var nmenor=0;
+var i=1;
+var nota;
+while(i<=10){
+	nota=parseInt(prompt("dime tu nota, En numero por favor" + i));
+if(nota>7){
+	nmayor++;
+	}
+	else{
+	nmenor++;
+	}
+	i++;
+	}
+	document.write( "hay "+ nmayor +" notas mayores o iguales a 7 <br>");
+		document.write( "hay "+ nmenor +" notas menores a 7");
+	
+</script>
+</body>
+</html>
